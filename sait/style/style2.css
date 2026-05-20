@@ -1,0 +1,691 @@
+.russo-one-regular {
+    font-family: "Russo One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: orange;
+    justify-content: center;
+    align-items: center;
+    display: flex
+;
+    grid-auto-flow: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+body {
+  margin:0;
+}
+main{
+	
+	 margin-left:100px;
+   margin-right:100px;
+
+}
+html{
+    /* Путь к вашей гифке */
+    background-image: url("../image/72d3a32d3a6271e46d0e6bb25aafc5d0.gif");
+    
+    /* Главное свойство: фиксирует фон, чтобы он не уезжал вверх при скролле */
+    background-attachment: fixed; 
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+
+    min-height: 100vh;
+    margin: 0;
+    scroll-behavior: smooth;
+a{
+	color:rgb(136, 178, 255);
+	 grid-auto-flow: column;
+	 margin:20px;
+	 font-size:20px;
+	 transition: 0.3s; 
+	 text-decoration: none;
+}
+a:hover {
+    color:rgb(237 0 255);
+	transform: scale(1.8); 
+    cursor: pointer;   
+transition: 0.3s; 
+}
+header{
+	background-color:#000000c9;
+	  position:sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ margin: 0px;
+    flex-wrap: wrap;
+}
+div{
+	 
+
+         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-content: stretch;
+}
+.backkk{
+	 color:white;
+
+}
+.logo{
+	width:100px;
+}
+.fontic{
+	flex-wrap:wrap;
+	   
+    margin-top: 200px;
+}
+h2{
+	font-size:20px;
+	text-align: -webkit-center;
+}
+.imgg{
+	width:500px;
+}
+h3{
+	margin-bottom:50px;
+}
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(10px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.image-wrapper {
+	position: relative; /* Делает этот блок точкой отсчета для текста */
+	display: inline-block; /* Чтобы блок не растягивался шире картинки */
+  }
+  
+  .mainimg {
+	display: block;
+	width: 100%; /* Или фиксированная ширина */
+	height: auto;
+  }
+  
+  .overlay-text {
+	position: absolute;
+	
+	/* Позиционирование (например, по центру) */
+	top: 25%;
+	
+
+	color: white;
+	padding: 0px;
+	margin-left: 20%;
+	text-align: left;
+	width: 80%;
+	font-size: 60px;
+	font-weight: bold;
+	
+  }
+  .overlll{
+	position: absolute;
+	
+	/* Позиционирование (например, по центру) */
+	top: 45%;
+	margin-left: 20%;
+	font-size: 37px;
+	color: #7cb0ff;
+	font-style: oblique;
+	
+    font-family: Arial, sans-serif;
+    animation: rainbow 3s infinite linear;
+  }
+
+  @keyframes rainbow {
+    0% { color: #56e6ff; }
+    33% { color: #7441ff; }
+    66% { color: #2b2b2b; }
+    100% { color: #5bbcfd88; }
+
+  }
+
+ 
+
+
+
+
+
+
+
+
+ /* НАШ ВЫДУМАННЫЙ КОНТЕЙНЕР */
+ .scene-wrapper {
+   position: relative;
+   width: 100%;
+   height: 600px; /* Высота вашего блока */
+   margin: 50px 0;
+   overflow: hidden; /* Чтобы картинки не вылетали за пределы секции */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-top: 2px solid #333;
+   border-bottom: 2px solid #333;
+ }
+
+ /* ФОН ВНУТРИ КОНТЕЙНЕРА */
+ .scene-bg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url("../image/72d3a32d3a6271e46d0e6bb25aafc5d0.gif");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   /* Эффект фиксации будет работать относительно экрана, но виден только здесь */
+   background-attachment: fixed; 
+   z-index: 0;
+ }
+
+ /* Сетка для 5 ссылок */
+ .links-container {
+        position: relative;
+        z-index: 1;
+        display: flex
+;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+ }
+
+ /* Базовый стиль ссылки-карточки */
+ .card-link {
+   position: relative;
+   width: 180px;
+   height: 300px;
+   background: rgba(255, 255, 255, 0.1);
+   background-size: cover;
+   background-position: center;
+   border-radius: 15px;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.4s ease;
+   border: 1px solid rgba(255,255,255,0.2);
+ }
+
+ /* PNG по бокам (скрыты) */
+ .card-link::before, .card-link::after {
+   content: "";
+   position: absolute;
+   width: 60px;
+   height: 60px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   opacity: 0;
+   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   pointer-events: none;
+   z-index: 5;
+ }
+
+ .card-link::before { 
+   left: -30px; transform: translateX(-20px); 
+   background-image: url("../image/left-icon.png"); /* ПУТЬ К PNG */
+ }
+ .card-link::after { 
+   right: -30px; transform: translateX(20px); 
+   background-image: url("../image/right-icon.png"); /* ПУТЬ К PNG */
+ }
+
+ /* Текст внутри */
+ .card-link span {
+   color: white;
+   font-family: sans-serif;
+   font-weight: bold;
+   opacity: 0.7;
+   transition: 0.3s;
+ }
+
+ /* ХОВЕР ЭФФЕКТЫ */
+ .card-link:hover {
+   transform: translateY(-10px);
+   border-color: #fff;
+   box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+ }
+
+ .card-link:hover::before, .card-link:hover::after {
+   opacity: 1;
+   transform: translateX(0);
+ }
+
+ .card-link:hover span {
+   opacity: 1;
+   text-shadow: 0 0 10px #fff;
+ }
+
+ /* Примеры разных картинок для блоков */
+ .c1 { background-image: url('../image/3407044.jpg'); }
+ .c2 { background-image: url('../image/3407044.jpg'); }
+ .c3 { background-image: url('../image/3407044.jpg'); }
+ .c4 { background-image: url('../image/3407044.jpg'); }
+ .c5 { background-image: url('../image/3407044.jpg'); }
+}
+
+.profile-card {
+    display: flex; /* Делаем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    padding: 20px;
+    max-width: 1050px;
+    box-shadow: 0 4px 8px rgba(100, 250, 255, 0.479);
+    margin-bottom: 200px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Делаем картинку круглой */
+    object-fit: cover; /* Чтобы картинка не деформировалась */
+    margin-right: 20px; /* Отступ от картинки до текста */
+}
+
+.profile-text h3 {
+    margin: 0 0 10px 0;
+    font-family: Arial, sans-serif;
+    color: #6fb2ff;
+     font-size: 34px;
+}
+
+.profile-text p {
+    margin: 0;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+
+
+
+
+.site-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-icons {
+        display: flex
+;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.social-icons a {
+    color: #888; /* Цвет иконок по умолчанию */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #fff; /* Цвет при наведении */
+    transform: scale(1.1); /* Легкое увеличение */
+}
+
+/* Чтобы SVG наследовал цвет ссылки */
+.social-icons svg {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.font1p{
+  color: #fff;
+ font-size: 50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+.maincont{
+  display: flex;
+      flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto 0px;
+    max-width: 1200px;
+}
+
+.textblockss{
+  text-decoration: none;
+  color: antiquewhite;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+}
+
+.logosmigos{
+  height: 150px;
+}
+
+
+
+
+
+
+
+
+.animation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Пропускает клики сквозь себя на сайт */
+    z-index: 9999; /* Поверх всех элементов сайта */
+    overflow: hidden;
+}
+
+.floating-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #d611af, #3333ff);
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.6;
+    top: 50%;
+    left: -150px; /* Спрятан слева в начале */
+    transition: transform 0.1s ease-out;
+}
+
+
+
+
+
+/* Боковое свечение (по умолчанию скрыто через opacity) */
+.side-glow {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 150px; /* Ширина зоны свечения */
+    pointer-events: none; /* Клик проходит насквозь */
+    z-index: 9999; /* Поверх всех элементов */
+    opacity: 0;
+    will-change: opacity; /* Оптимизация для видеокарты */
+    transition: opacity 0.1s linear; /* Плавное проявление */
+}
+
+/* Свечение слева */
+.glow-left {
+    left: 0;
+    background: radial-gradient(ellipse at left, rgba(0, 149, 255, 0.384) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Свечение справа */
+.glow-right {
+    right: 0;
+    background: radial-gradient(ellipse at right, rgba(183, 0, 255, 0.356) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+
+
+
+
+
+
+/* Полноэкранный контейнер поверх всего сайта */
+.v2_Bm4_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #442868; /* Сплошной цветной фон */
+    z-index: 999999; /* Максимальный приоритет, чтобы быть поверх всего */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+/* Слайды с текстом (изначально скрыты и наложены друг на друга) */
+.k7_Lp1_slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out, visibility 0.6s;
+}
+
+/* Стили для текста */
+.z4_Wq8_title {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: clamp(1.8rem, 4vw, 4.5rem);
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+}
+
+/* Класс для включения видимости текущего слайда */
+.k7_Lp1_slide.m5_Nx3_active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Класс для плавного исчезновения всего фона в конце */
+.v2_Bm4_container.f1_Jp8_hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+
+
+/* Корневой контейнер страницы */
+.course-lesson-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #f5f5f7; /* Основной светлый цвет текста */
+}
+
+/* --- ВВОДНЫЙ БЛОК (HERO) --- */
+.course-lesson-container .lesson-hero-header {
+    text-align: left; /* Аккуратное выравнивание по левому краю */
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.course-lesson-container .lesson-meta-badge {
+    display: inline-block;
+    background-color: #ffffff; /* Контрастный белый мини-бейдж */
+    color: #000000;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 24px;
+}
+
+.course-lesson-container .lesson-main-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px 0;
+    color: #ffffff; /* Абсолютно белый заголовок */
+}
+
+.course-lesson-container .lesson-lead-text {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: #9a9a9e; /* Благородный приглушенный цвет для баланса */
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- ВЕРТИКАЛЬНАЯ ТЕКСТОВАЯ ЛЕНТА (СВЕРХУ ВНИЗ) --- */
+.course-lesson-container .lesson-content-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 70px; /* Большие аккуратные отступы между параграфами при скролле */
+}
+
+/* Текстовые секции */
+.course-lesson-container .lesson-text-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Строка тегов */
+.course-lesson-container .section-meta-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.course-lesson-container .section-badge-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #45f3ff; /* Неоновый акцент на названии шага */
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.course-lesson-container .section-badge-tag.homework-badge {
+    color: #ff9100; /* Оранжевый акцент для домашнего задания */
+}
+
+.course-lesson-container .section-format-tag {
+    font-size: 0.75rem;
+    color: #6e6e73;
+    border: 1px solid #333336;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Заголовки тем */
+.course-lesson-container .section-heading {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px 0;
+    color: #ffffff;
+}
+
+/* Абзацы большого текста */
+.course-lesson-container .section-paragraph {
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    line-height: 1.7;
+    color: #d2d2d7; /* Мягкий светлый оттенок для комфортного чтения ночью */
+    margin: 0 0 20px 0;
+    font-weight: 400;
+}
+
+.course-lesson-container .section-paragraph:last-of-type {
+    margin-bottom: 0;
+}
+
+/* --- ЗОНА ДЕЙСТВИЯ (КНОПКА СДАЧИ) --- */
+.course-lesson-container .action-footer-block {
+    margin-top: 35px;
+    padding: 24px;
+    background-color: #16161a;
+    border-radius: 14px;
+    border-left: 3px solid #ff9100;
+}
+
+.course-lesson-container .action-instruction {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #86868b;
+    margin: 0 0 20px 0;
+}
+
+.course-lesson-container .action-submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Белая контрастная кнопка */
+    color: #000000;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.course-lesson-container .action-submit-button:hover {
+    opacity: 0.9;
+}
+
+.course-lesson-container .action-submit-button:active {
+    transform: scale(0.98);
+}
+
+/* --- АДАПТИВНОСТЬ ПОД СМАРТФОНЫ --- */
+@media (max-width: 768px) {
+    .course-lesson-container {
+        padding: 50px 16px;
+    }
+
+    .course-lesson-container .lesson-hero-header {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+
+    .course-lesson-container .lesson-content-stream {
+        gap: 50px;
+    }
+
+    .course-lesson-container .action-submit-button {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+
